@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>个人主页</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="top-nav">
+    <div class="top-nav-inner">
+      <a href="#about-me" class="top-logo" data-i18n="homepage">个人主页</a>
+      <nav class="top-nav-links" aria-label="页面导航">
+        <a href="#about-me" data-i18n="aboutMe">关于我</a>
+        <a href="#projects" data-i18n="projects">项目作品</a>
+        <a href="#mini-sites" data-i18n="miniSites">其他作品</a>
+      </nav>
+      <button class="lang-switcher" onclick="setLanguage(getLanguage() === 'zh' ? 'en' : 'zh')">EN</button>
+    </div>
+  </header>
+  <div class="page-container">
+    <aside class="sidebar">
+      <div class="profile-card">
+        <div class="photo-frame">
+          <img src="Assets/images/个人照片.jpg" alt="个人照片" />
+        </div>
+        <div class="profile-info">
+          <h1 class="name">赵函</h1>
+          <p class="role">职位 / 学校 / 标签</p>
+          <p class="intro" data-i18n="welcome">欢迎来到我的个人主页。</p>
+          <div class="contact-list">
+            <div class="contact-item"><span data-i18n="location">📍 浙江杭州</span></div>
+            <div class="contact-item"><span data-i18n="resume">📄 简历</span></div>
+            <div class="contact-item"><span data-i18n="linkedin">🔗 LinkedIn</span></div>
+            <div class="contact-item"><span data-i18n="github">🐱 GitHub</span></div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <section id="about-me" class="section about-me">
+        <div class="section-header">
+          <h2 data-i18n="aboutMe">关于我</h2>
+        </div>
+        <div class="about-body">
+          <p data-i18n="aboutSection">这里展示你的个人简介，学术背景、研究方向、技术特长等内容。</p>
+          <p data-i18n="aboutMore">你可以在这里补充更多介绍性文字，内容会出现在页面上部左侧。</p>
+        </div>
+      </section>
+
+      <section id="projects" class="section projects">
+        <div class="section-header">
+          <h2>项目</h2>
+          <p class="section-note">每个项目包含详情、图片、视频和 GitHub 链接。</p>
+        </div>
+
+        <div class="project-item" id="project-1">
+          <div class="project-summary">
+            <h3 class="project-title">VR导演模拟器</h3>
+            <p class="project-description">这是项目简介区域。这里预留项目目标、技术栈、挑战与成果。</p>
+            <div class="project-links">
+              <a href="https://github.com/ddaiyy/VRDirectorSimulator_FYP.git">https://github.com/ddaiyy/VRDirectorSimulator_FYP.git</a>
+              <a href="project-1-detail.html">项目详情</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-item" id="project-2">
+          <div class="project-summary">
+            <h3 class="project-title">AR 室内设计应用程序</h3>
+            <p class="project-description">这是第二个项目的介绍位置。用来显示项目的背景、功能和你的角色。</p>
+            <div class="project-links">
+              <a href="https://github.com/Zttwilight/ARInteriorDesign.git">https://github.com/Zttwilight/ARInteriorDesign.git</a>
+              <a href="project-2-detail.html">项目详情</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-item" id="project-3">
+          <div class="project-summary">
+            <h3 class="project-title">Maya建模</h3>
+            <p class="project-description">这是第二个项目的介绍位置。用来显示项目的背景、功能和你的角色。</p>
+            <div class="project-links">
+              <a href="project-3-detail.html">项目详情</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-item" id="project-4">
+          <div class="project-summary">
+            <h3 class="project-title">VR 解谜游戏</h3>
+            <p class="project-description">这是第二个项目的介绍位置。用来显示项目的背景、功能和你的角色。</p>
+            <div class="project-links">
+              <a href="https://github.com/ddaiyy/Immersive-Games-Design.git">https://github.com/ddaiyy/Immersive-Games-Design.git</a>
+              <a href="project-4-detail.html">项目详情</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-item" id="project-5">
+          <div class="project-summary">
+            <h3 class="project-title">Gamejam 铲屎官模拟器</h3>
+            <p>
+        《铲屎官模拟器》是一款在 TapTap 聚光灯2025年48小时游戏创作挑战（成都场）中诞生的养宠模拟类作品，
+        由我与另外两名组员从零开始，在48小时内完成了从核心玩法构思、系统设计到程序开发与美术资源制作的全流程开发。
+            </p>
+             <p>
+        玩家扮演一名“被宠物持续打断工作的打工人”，需要在日常高强度工作节奏中兼顾照料宠物的需求。
+        核心玩法围绕“注意力被打断”与“责任管理”展开：玩家需要通过鼠标与小狗互动（如抚摸、点击陪玩）
+        或进行喂食等行为来维持小狗的好感度与状态。
+    </p>
+    <p>
+        当玩家专注工作时，小狗可能主动寻求关注，从而形成一种“工作—陪伴”的持续拉扯体验。
+        整体设计旨在用轻量机制还原现实中养宠人与工作之间的注意力冲突与情感牵绊。
+    </p>
+
+            <div class="project-links">
+              <a href="https://www.taptap.cn/app/797413?os=pc">https://www.taptap.cn/app/797413?os=pc</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-item" id="project-6">
+          <div class="project-summary">
+            <h3 class="project-title">3D游戏 unity开发</h3>
+            <p class="project-description">这是第二个项目的介绍位置。用来显示项目的背景、功能和你的角色。</p>
+            <div class="project-links">
+              <a href="project-6-detail.html">项目详情</a>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section id="mini-sites" class="section mini-sites">
+        <div class="section-header">
+          <h2>其他作品</h2>
+          <p class="section-note">这里放你制作的小网页，包含详情、截图或演示图、链接。</p>
+        </div>
+
+          <article class="mini-site-card" id="mini-site-1">
+            <div class="card-grid">
+            
+            <img src="Assets/images/约稿1.png" alt="小网页截图 1" />
+            <img src="Assets/images/约稿2.png" alt="小网页截图 2" />
+            <div class="card-body">
+              <h3>blender海产渲染约稿平台</h3>
+              <p>简要说明该小网页的功能、技术实现、以及用途。</p>
+              <div class="project-links">
+              <a href="https://kongzuk.github.io/NewBlenderFlow/">https://kongzuk.github.io/NewBlenderFlow/</a>
+            
+          </article>
+
+          <article class="mini-site-card" id="mini-site-2">
+            <img src="https://via.placeholder.com/420x240" alt="小网页截图 2" />
+            <div class="card-body">
+              <h3>作品名称 2</h3>
+              <p>这里预留小网页的简介和说明，方便以后替换成真实内容。</p>
+              <div class="card-links">
+                <a href="#" class="button small">查看详情</a>
+                <a href="#" class="button small secondary">访问链接</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="translations.js"></script>
+</body>
+</html>

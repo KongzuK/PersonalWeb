@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>maya建模 2 详情</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="top-nav">
+    <div class="top-nav-inner">
+      <a href="index.html" class="top-logo" data-i18n="homepage">个人主页</a>
+      <nav class="top-nav-links" aria-label="页面导航">
+        <a href="index.html#about-me" data-i18n="aboutMe">关于我</a>
+        <a href="index.html#projects" data-i18n="projects">项目作品</a>
+        <a href="index.html#mini-sites" data-i18n="miniSites">其他作品</a>
+      </nav>
+      <button class="lang-switcher" onclick="setLanguage(getLanguage() === 'zh' ? 'en' : 'zh')">EN</button>
+    </div>
+  </header>
+  <div class="page-container">
+    <aside class="sidebar">
+      <div class="profile-card">
+        <div class="photo-frame">
+          <img src="Assets/images/个人照片.jpg" alt="个人照片" />
+        </div>
+        <div class="profile-info">
+          <h1 class="name">赵函</h1>
+          <p class="role">职位 / 学校 / 标签</p>
+          <p class="intro" data-i18n="welcome">欢迎来到我的个人主页。</p>
+          <div class="contact-list">
+            <div class="contact-item"><span data-i18n="location">📍 浙江杭州</span></div>
+            <div class="contact-item"><span data-i18n="resume">📄 简历</span></div>
+            <div class="contact-item"><span data-i18n="linkedin">🔗 LinkedIn</span></div>
+            <div class="contact-item"><span data-i18n="github">🐱 GitHub</span></div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <section class="section project-detail-page">
+        <div class="detail-header">
+          <h2>maya建模 2 详情</h2>
+          <a href="index.html#projects" class="back-link" data-i18n="backToList">← 返回项目列表</a>
+        </div>
+        
+        <div class="detail-content">
+          <div class="project-info">
+            <h3>项目简介</h3>
+            <p>这是第二个项目的介绍位置。用来显示项目的背景、功能和你的角色。</p>
+            <p>
+              <strong>GitHub:</strong> 
+              <a href="#">https://github.com/your-repo</a>
+            </p>
+          </div>
+
+          <div class="project-media">
+            <div class="media-card">
+              <h4 data-i18n="projectImages">项目图片</h4>
+              <img src="Assets/images/渲染图1.jpg" alt="项目图片 3" />
+              <img src="Assets/images/渲染图2.jpg" alt="项目图片 3" />
+              <img src="Assets/images/渲染图3.jpg" alt="项目图片 3" />
+              <img src="Assets/images/渲染图4.jpg" alt="项目图片 3" />
+              <img src="Assets/images/渲染图5.jpg" alt="项目图片 3" />
+              <img src="Assets/images/渲染图6.jpg" alt="项目图片 3" />
+              <img src="Assets/images/渲染图7.jpg" alt="项目图片 3" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="translations.js"></script>
+</body>
+</html>
