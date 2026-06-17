@@ -3,20 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>项目名称 2 详情</title>
+  <title>铲屎官模拟器详情</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="top-nav">
     <div class="top-nav-inner">
-      <a href="index.html" class="top-logo">个人主页</a>
+      <a href="index.html" class="top-logo" data-i18n="homepage">个人主页</a>
       <nav class="top-nav-links" aria-label="页面导航">
-        <a href="index.html#about-me">About Me</a>
-        <a href="index.html#projects">Projects</a>
-        <a href="index.html#mini-sites">小网页作品</a>
+        <a href="index.html#about-me" data-i18n="aboutMe">关于我</a>
+        <a href="index.html#projects" data-i18n="projects">项目作品</a>
+        <a href="index.html#mini-sites" data-i18n="miniSites">其他作品</a>
       </nav>
+      <button class="lang-switcher" type="button" onclick="setLanguage(getLanguage() === 'zh' ? 'en' : 'zh')">EN</button>
     </div>
   </header>
+
   <div class="page-container">
     <aside class="sidebar">
       <div class="profile-card">
@@ -24,15 +26,9 @@
           <img src="Assets/images/个人照片.jpg" alt="个人照片" />
         </div>
         <div class="profile-info">
-          <h1 class="name">赵函</h1>
+          <h1 class="name">赵婷</h1>
           <p class="role">职位 / 学校 / 标签</p>
-          <p class="intro">欢迎来到我的个人主页。</p>
-          <div class="contact-list">
-            <div class="contact-item">📍 浙江杭州</div>
-            <div class="contact-item">📄 简历</div>
-            <div class="contact-item">🔗 LinkedIn</div>
-            <div class="contact-item">🐱 GitHub</div>
-          </div>
+          <p class="intro" data-i18n="welcome">欢迎来到我的个人主页。</p>
         </div>
       </div>
     </aside>
@@ -40,27 +36,19 @@
     <main class="content">
       <section class="section project-detail-page">
         <div class="detail-header">
-          <h2>项目名称 2 详情</h2>
-          <a href="index.html#projects" class="back-link">← 返回项目列表</a>
+          <h2>铲屎官模拟器详情</h2>
+          <a href="index.html#projects" class="back-link" data-i18n="backToList">返回项目列表</a>
         </div>
-        
         <div class="detail-content">
           <div class="project-info">
             <h3>项目简介</h3>
-            <p>这是第二个项目的介绍位置。用来显示项目的背景、功能和你的角色。</p>
-            <p>
-              <strong>TapTap:</strong> 
-              <a href="#">https://www.taptap.cn/app/797413?os=pc</a>
-            </p>
+            <p>《铲屎官模拟器》是在 TapTap 聚光灯 2025 年 48 小时游戏创作挑战中完成的养宠模拟类作品。</p>
+            <p>玩家需要在日常工作节奏中照顾宠物，处理陪伴、打断和责任管理之间的冲突。</p>
+            <p><strong>TapTap:</strong> <a href="https://www.taptap.cn/app/797413?os=pc">https://www.taptap.cn/app/797413?os=pc</a></p>
           </div>
-
           <div class="project-media">
-            <div class="media-card">
-              <h4>项目图片</h4>
-              <img src="https://via.placeholder.com/540x320" alt="项目图片 2" />
-            </div>
             <div class="media-card video-card">
-              <h4>项目视频</h4>
+              <h4 data-i18n="projectVideo">项目视频</h4>
               <div class="video-placeholder">视频预留区域</div>
             </div>
           </div>
@@ -68,5 +56,6 @@
       </section>
     </main>
   </div>
+  <script src="translations.js"></script>
 </body>
 </html>

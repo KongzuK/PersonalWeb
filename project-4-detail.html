@@ -3,20 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>maya建模 2 详情</title>
+  <title>VR解谜游戏详情</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="top-nav">
     <div class="top-nav-inner">
-      <a href="index.html" class="top-logo">个人主页</a>
+      <a href="index.html" class="top-logo" data-i18n="homepage">个人主页</a>
       <nav class="top-nav-links" aria-label="页面导航">
-        <a href="index.html#about-me">About Me</a>
-        <a href="index.html#projects">Projects</a>
-        <a href="index.html#mini-sites">小网页作品</a>
+        <a href="index.html#about-me" data-i18n="aboutMe">关于我</a>
+        <a href="index.html#projects" data-i18n="projects">项目作品</a>
+        <a href="index.html#mini-sites" data-i18n="miniSites">其他作品</a>
       </nav>
+      <button class="lang-switcher" type="button" onclick="setLanguage(getLanguage() === 'zh' ? 'en' : 'zh')">EN</button>
     </div>
   </header>
+
   <div class="page-container">
     <aside class="sidebar">
       <div class="profile-card">
@@ -24,15 +26,9 @@
           <img src="Assets/images/个人照片.jpg" alt="个人照片" />
         </div>
         <div class="profile-info">
-          <h1 class="name">赵函</h1>
+          <h1 class="name">赵婷</h1>
           <p class="role">职位 / 学校 / 标签</p>
-          <p class="intro">欢迎来到我的个人主页。</p>
-          <div class="contact-list">
-            <div class="contact-item">📍 浙江杭州</div>
-            <div class="contact-item">📄 简历</div>
-            <div class="contact-item">🔗 LinkedIn</div>
-            <div class="contact-item">🐱 GitHub</div>
-          </div>
+          <p class="intro" data-i18n="welcome">欢迎来到我的个人主页。</p>
         </div>
       </div>
     </aside>
@@ -40,31 +36,25 @@
     <main class="content">
       <section class="section project-detail-page">
         <div class="detail-header">
-          <h2>maya建模 2 详情</h2>
-          <a href="index.html#projects" class="back-link">← 返回项目列表</a>
+          <h2>VR解谜游戏详情</h2>
+          <a href="index.html#projects" class="back-link" data-i18n="backToList">返回项目列表</a>
         </div>
-        
         <div class="detail-content">
           <div class="project-info">
             <h3>项目简介</h3>
-            <p>这是第二个项目的介绍位置。用来显示项目的背景、功能和你的角色。</p>
-            <p>
-              <strong>GitHub:</strong> 
-              <a href="#">https://github.com/your-repo</a>
-            </p>
+            <p>这是 VR 解谜游戏项目的介绍位置。用来展示项目背景、功能和你的角色。</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/ddaiyy/Immersive-Games-Design.git">https://github.com/ddaiyy/Immersive-Games-Design.git</a></p>
           </div>
-
           <div class="project-media">
             <div class="media-card">
-              <h4>项目图片</h4>
-              <img src="Assets/images/3D3.png" alt="项目图片 2" />
-              
+              <h4 data-i18n="projectImages">项目图片</h4>
+              <img src="Assets/images/3D3.png" alt="VR解谜游戏截图" />
             </div>
             <div class="media-card video-card">
-              <h4>项目视频</h4>
-              <video controls poster="assets/video/video-poster.jpg">
-                <source src="assets/video/GroupC_VR_Video.mp4" type="video/mp4" />
-                您的浏览器不支持 video 标签。
+              <h4 data-i18n="projectVideo">项目视频</h4>
+              <video controls>
+                <source src="Assets/video/GroupC_VR_Video.mp4" type="video/mp4" />
+                <span data-i18n="videoUnsupported">您的浏览器不支持 video 标签。</span>
               </video>
             </div>
           </div>
@@ -72,5 +62,6 @@
       </section>
     </main>
   </div>
+  <script src="translations.js"></script>
 </body>
 </html>

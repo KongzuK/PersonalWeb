@@ -16,6 +16,16 @@ body {
   padding: 0;
   background: #f5f6f8;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+a {
+  overflow-wrap: anywhere;
 }
 
 .top-nav {
@@ -42,6 +52,7 @@ body {
   font-weight: 700;
   color: #1f1f1f;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .top-nav-links {
@@ -149,6 +160,8 @@ body {
   gap: 8px;
   color: #333;
   font-size: 0.95rem;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .content {
@@ -240,15 +253,18 @@ body {
   background: #fafbff;
   border-radius: 18px;
   padding: 18px;
+  display: grid;
+  gap: 14px;
 }
 
 .media-card h4 {
-  margin: 0 0 12px;
+  margin: 0;
   font-size: 1rem;
 }
 
 .media-card img {
   width: 100%;
+  display: block;
   border-radius: 14px;
   object-fit: cover;
 }
@@ -291,6 +307,12 @@ body {
   width: 100%;
   display: block;
   object-fit: cover;
+}
+
+.mini-site-images {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
 }
 
 .card-body {
@@ -373,6 +395,7 @@ body {
 @media (max-width: 1100px) {
   .page-container {
     grid-template-columns: 1fr;
+    max-width: 860px;
   }
 
   .sidebar {
@@ -383,11 +406,64 @@ body {
 
 @media (max-width: 740px) {
   body {
-    padding: 18px;
+    padding: 0;
   }
 
-  .section {
-    padding: 22px;
+  .top-nav-inner {
+    padding: 12px 16px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .top-logo {
+    padding: 6px 0;
+  }
+
+  .top-nav-links {
+    order: 3;
+    width: 100%;
+    flex-wrap: nowrap;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+
+  .top-nav-links a,
+  .lang-switcher {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  .page-container {
+    padding: 16px;
+    gap: 18px;
+  }
+
+  .profile-card {
+    border-radius: 18px;
+    padding: 20px;
+  }
+
+  .photo-frame {
+    max-width: 180px;
+    margin-bottom: 16px;
+  }
+
+  .name {
+    font-size: 1.45rem;
+    letter-spacing: 0;
+  }
+
+  .content {
+    gap: 18px;
+  }
+
+  .section,
+  .project-detail-page {
+    border-radius: 18px;
+    padding: 18px;
   }
 
   .project-item,
@@ -398,5 +474,45 @@ body {
 
   .mini-sites .card-grid {
     grid-template-columns: 1fr;
+  }
+
+  .mini-site-images {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .detail-header h2 {
+    font-size: 1.35rem;
+  }
+
+  .project-info,
+  .media-card {
+    padding: 14px;
+    border-radius: 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  :root {
+    font-size: 15px;
+  }
+
+  .top-nav-inner {
+    padding: 10px 12px;
+  }
+
+  .page-container {
+    padding: 12px;
+  }
+
+  .section,
+  .project-detail-page,
+  .profile-card {
+    padding: 16px;
   }
 }
